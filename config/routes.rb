@@ -1,5 +1,7 @@
 Boot::Application.routes.draw do
   
+  resources :users
+
   devise_for :emps 
  devise_scope :emp do
   get '/elogin' => 'devise/sessions#new'
